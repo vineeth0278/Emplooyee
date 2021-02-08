@@ -1,0 +1,32 @@
+package my_captian;
+
+import java.util.Scanner;
+public class Employee {
+    int year;
+    String name,add;
+    public static void main(String[] args){
+   
+    System.out.println("Enter the no. of employees :");
+    Scanner sc=new Scanner(System.in);
+    int i = sc.nextInt();
+    Employee emp[]=new Employee[i];
+    for (int j=0;j<i;j++){
+        emp[j]=new Employee();
+        System.out.println("Enter employee "+(j+1)+" data :");
+        System.out.println("Enter employee--"+(j+1)+" name :");
+        emp[j].name=sc.next();
+        System.out.println("Enter employee--"+(j+1)+" Year of joining :");
+        emp[j].year=sc.nextInt();
+        System.out.println("Enter employee--"+(j+1)+ "Address :");
+        emp[j].add=sc.next();
+        
+    }
+    System.out.println("Name of the employee\tYear of joining\t\tAddress");
+    for(int j=0;j<i;j++){
+        System.out.println(emp[j].name+"\t\t\t"+emp[j].year+"\t\t\t"+emp[j].add);
+    }
+    
+    
+   
+        } 
+    }
